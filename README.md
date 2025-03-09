@@ -20,6 +20,8 @@ Malayalam - https://drive.google.com/file/d/1zfg30ajYWTCxPuRVaqY-caZafstetCR1/vi
 
 **Steps:**
 
-_1:Run M1 file, followed by M2 and then M3(Tamil & Malayalam) py files.
-2:Use appropiate file names as ouput files then run maj_vote.py file
-3:Final result file_
+_1:Run M1 file, followed by M2 and then M3(Tamil & Malayalam) py files._
+
+_2:Use appropiate file names as output files then run maj_vote.py file_
+
+_3:Final result file_
