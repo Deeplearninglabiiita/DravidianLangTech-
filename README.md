@@ -16,3 +16,10 @@ Results (Rank list)
 Tamil - https://drive.google.com/file/d/1yoXmaSYo4ZJT4AaDHzakDvlgnuUem_v6/view?usp=sharing
 
 Malayalam - https://drive.google.com/file/d/1zfg30ajYWTCxPuRVaqY-caZafstetCR1/view?usp=sharing
+
+
+**Steps:**
+
+_1:Run M1 file, followed by M2 and then M3(Tamil & Malayalam) py files.
+2:Use appropiate file names as ouput files then run maj_vote.py file
+3:Final result file_
