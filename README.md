@@ -11,7 +11,7 @@ This shared task is expected to attract researchers and professionals from NLP a
 https://codalab.lisn.upsaclay.fr/competitions/20856#learn_the_details
 
 Results (Rank list)
- 
+
 
 Tamil - https://drive.google.com/file/d/1yoXmaSYo4ZJT4AaDHzakDvlgnuUem_v6/view?usp=sharing
 
@@ -20,7 +20,7 @@ Malayalam - https://drive.google.com/file/d/1zfg30ajYWTCxPuRVaqY-caZafstetCR1/vi
 
 **Steps:**
 
-_1:Run M1 file, followed by M2 and then M3(Tamil & Malayalam) py files._
+_1:Run M1 file, followed by M2 and then M3(Tamil & Malayalam) .py files._
 
 _2:Use appropiate file names as output files then run maj_vote.py file_
 
