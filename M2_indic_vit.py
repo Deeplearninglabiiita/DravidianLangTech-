@@ -75,19 +75,19 @@ class MultimodalClassifier(torch.nn.Module):
         super().__init__()
         self.text_encoder = text_encoder
         self.clip = clip_model
-        # Fusion dimension: sum of image and text embedding sizes
+
         fused_dim = self.clip.config.projection_dim + self.text_encoder.config.hidden_size
         self.classifier = torch.nn.Linear(fused_dim, 1)
 
     def forward(self, input_ids, attention_mask, pixel_values):
-        # Extract text features using IndicBERT
+
         text_outputs = self.text_encoder(input_ids=input_ids, attention_mask=attention_mask)
         text_features = text_outputs.last_hidden_state[:, 0, :]  # CLS token representation
 
-        # Extract image features using CLIP
+
         image_features = self.clip.get_image_features(pixel_values=pixel_values)
 
-        # Concatenate text and image features
+
         fused = torch.cat((text_features, image_features), dim=1)
         logits = self.classifier(fused)
         return logits
