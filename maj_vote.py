@@ -10,7 +10,7 @@ df1 = df1[["image_id", "predicted_labels"]]
 df2 = df2[["image_id", "predicted_labels"]]
 df3 = df3[["image_id", "predicted_labels"]]
 
-# Merge the dataframes on image_id
+
 df_merged = (
     df1.merge(df2, on="image_id", suffixes=("_m1", "_m2"))
        .merge(df3, on="image_id", suffixes=("", "_m3"))
@@ -18,7 +18,7 @@ df_merged = (
 
 
 def parse_label(label_str):
-    # Strip brackets and convert to integer
+
     return int(label_str.strip("[]"))
 
 
@@ -28,7 +28,7 @@ df_merged["label_m3"] = df_merged["predicted_labels"].apply(parse_label)
 
 def majority_vote(row):
     s = row["label_m1"] + row["label_m2"] + row["label_m3"]
-    # If sum of labels >= 2, final label is 1, else 0
+
     return 1 if s >= 2 else 0
 
 df_merged["final_label"] = df_merged.apply(majority_vote, axis=1)
@@ -50,7 +50,7 @@ df1 = df1[["image_id", "predicted_labels"]]
 df2 = df2[["image_id", "predicted_labels"]]
 df3 = df3[["image_id", "predicted_labels"]]
 
-# Merge the dataframes on image_id
+
 df_merged = (
     df1.merge(df2, on="image_id", suffixes=("_m1", "_m2"))
        .merge(df3, on="image_id", suffixes=("", "_m3"))
@@ -58,7 +58,7 @@ df_merged = (
 
 
 def parse_label(label_str):
-    # Strip brackets and convert to integer
+
     return int(label_str.strip("[]"))
 
 
@@ -68,7 +68,7 @@ df_merged["label_m3"] = df_merged["predicted_labels"].apply(parse_label)
 
 def majority_vote(row):
     s = row["label_m1"] + row["label_m2"] + row["label_m3"]
-    # If sum of labels >= 2, final label is 1, else 0
+
     return 1 if s >= 2 else 0
 
 df_merged["final_label"] = df_merged.apply(majority_vote, axis=1)
